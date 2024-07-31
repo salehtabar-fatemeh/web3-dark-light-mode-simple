@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>event</title>
     <style>
-        body{
-            background-color: aquamarine;
-        }
-        button{
-            background-color: rgb(240, 116, 28);
-            padding: 5px 10px;
-            border: 1px solid yellow;
-            border-radius: 4px;    
-        }
-        .dark{
-            background-color: grey;
-        }
-        .dark button{
-            background-color: darkblue;
-        }
+      body {
+        background-color: aquamarine;
+      }
+      button {
+        background-color: rgb(240, 116, 28);
+        padding: 5px 10px;
+        border: 1px solid yellow;
+        border-radius: 4px;
+        width: 80px;
+        height: 40px;
+      }
+      .dark {
+        background-color: grey;
+      }
+      .dark button {
+        background-color: darkblue;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <button id="button-click" onclick="change()">light</button>
-    
+    <script>
+      function change() {
+        document.body.classList.toggle("dark");
+        if (document.getElementById("button-click").innerHTML === "dark") {
+          document.getElementById("button-click").innerHTML = "light";
+        } else {
+          document.getElementById("button-click").innerHTML = "dark";
+        }
+      }
     </script>
-    
-</body>
+  </body>
 </html>
